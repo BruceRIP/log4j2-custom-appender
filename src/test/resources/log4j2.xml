@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration xmlns:xi="http://www.w3.org/2001/XInclude" packages="com.log4j2.custom.appender" status="WARN">
+
+    <Appenders>
+        <ElasticAppender name="ElasticAppender">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] [%X{identity}] %-5level %logger{36}(%L) - %msg%n" />
+        </ElasticAppender>
+        <Console name="Console" target="SYSTEM_OUT">
+            <!-- <JSONLayout complete="true" compact="true"/> -->
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] [%X{identity}] %-5level %logger{36}(%L) - %msg%n" />
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="DEBUG">
+            <AppenderRef ref="ElasticAppender" />
+            <AppenderRef ref="Console" />
+        </Root>
+    </Loggers>
+</Configuration>

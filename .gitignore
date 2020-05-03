@@ -1,0 +1,22 @@
+# Log file
+*.log
+
+#MacFiles
+.DS_Store
+
+#Node dependecies
+node_modules
+
+#visual studio code
+.vscode
+*.iml
+.idea/
+
+logs
+*.log
+
+.history
+
+.target*
+.target/*
+target/
